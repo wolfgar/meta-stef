@@ -1,0 +1,42 @@
+commit ea88f1583792a154b567f05df16cf9e195a6d8b2
+Author: wolfgar <stephan.rafin@laposte.net>
+Date:   Sun Aug 18 22:41:06 2013 +0200
+
+    Enable custom directories
+
+diff --git a/Makefile b/Makefile
+index a1595a8..abe0d6b 100644
+--- a/Makefile
++++ b/Makefile
+@@ -28,9 +28,9 @@ bindir=$(prefix)/bin
+ sbindir=$(prefix)/sbin
+ mandir=$(prefix)/man
+ 
+-BINDIR=$(DESTDIR)$(bindir)
+-SBINDIR=$(DESTDIR)$(sbindir)
+-MANDIR=$(DESTDIR)$(mandir)
++BINDIR?=$(DESTDIR)$(bindir)
++SBINDIR?=$(DESTDIR)$(sbindir)
++MANDIR?=$(DESTDIR)$(mandir)
+ 
+ LIBS_posix=
+ LIBS_darwin=
+diff --git a/librtmp/Makefile b/librtmp/Makefile
+index 96c076b..9683981 100644
+--- a/librtmp/Makefile
++++ b/librtmp/Makefile
+@@ -6,10 +6,10 @@ incdir=$(prefix)/include/librtmp
+ bindir=$(prefix)/bin
+ libdir=$(prefix)/lib
+ mandir=$(prefix)/man
+-BINDIR=$(DESTDIR)$(bindir)
+-INCDIR=$(DESTDIR)$(incdir)
+-LIBDIR=$(DESTDIR)$(libdir)
+-MANDIR=$(DESTDIR)$(mandir)
++BINDIR?=$(DESTDIR)$(bindir)
++INCDIR?=$(DESTDIR)$(incdir)
++LIBDIR?=$(DESTDIR)$(libdir)
++MANDIR?=$(DESTDIR)$(mandir)
+ 
+ CC=$(CROSS_COMPILE)gcc
+ LD=$(CROSS_COMPILE)ld
