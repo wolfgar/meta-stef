@@ -27,6 +27,7 @@ IMAGE_INSTALL += " \
     ntfs-3g \
     ntp \
     ntp-utils \
+    tvheadend \
 "
 
 
