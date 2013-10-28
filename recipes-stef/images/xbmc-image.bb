@@ -28,6 +28,7 @@ IMAGE_INSTALL += " \
     ntp \
     ntp-utils \
     tvheadend \
+    util-linux \
 "
 
 
