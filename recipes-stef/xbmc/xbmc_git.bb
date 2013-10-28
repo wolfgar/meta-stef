@@ -5,9 +5,9 @@ LIC_FILES_CHKSUM = "file://copying.txt;md5=4cea88e622381d1ad6e43f07c47513b5"
 DEPENDS = "boost libass mysql5 mpeg2dec libmad libmodplug tiff yajl libtinyxml taglib libcdio jasper libmicrohttpd libssh samba rtmpdump libbluray libnfs samba swig-native"
 RRECOMMENDS_${PN} = "lirc"
 
-PR = "r1"
+PR = "r2"
 
-SRC_URI = "git://github.com/wolfgar/xbmc.git;protocol=https;tag=97c84a05fb3f9f78744b915d3cc6e31f4e095974"
+SRC_URI = "git://github.com/wolfgar/xbmc.git;protocol=https;tag=613e68f57bca9188be147465bcd7ff62e87e708b"
 
 S = "${WORKDIR}/git"
 
@@ -15,7 +15,7 @@ S = "${WORKDIR}/git"
 inherit autotools lib_package pkgconfig gettext python-dir
 
 EXTRA_OECONF="ac_cv_path_JAVA_EXE=/usr/bin/java \
---prefix=/imx6/xbmc --disable-x11 --disable-sdl --disable-xrandr --disable-gl --disable-vdpau --disable-vaapi --disable-openmax --enable-neon --enable-gles --enable-udev --enable-codec=imxvpu"
+--prefix=/imx6/xbmc --disable-x11 --disable-sdl --disable-xrandr --disable-gl --disable-vdpau --disable-vaapi --disable-openmax --enable-neon --enable-gles --enable-udev --enable-codec=imxvpu --disable-debug"
 
 
 do_configure() {
