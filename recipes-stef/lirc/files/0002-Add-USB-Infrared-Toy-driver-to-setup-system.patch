@@ -1,0 +1,117 @@
+From 561a2d649657deee3d6d39972c6d82d5b9a1a3c6 Mon Sep 17 00:00:00 2001
+From: Peter Kooiman <pkooiman@gmail.com>
+Date: Thu, 1 Sep 2011 18:20:33 +0200
+Subject: [PATCH 2/2] Add USB Infrared Toy driver to setup system
+
+---
+ setup.data |   10 ++++++++++
+ setup.sh   |   30 +++++++++++++++++++++++++++++-
+ 2 files changed, 39 insertions(+), 1 deletions(-)
+
+diff --git a/setup.data b/setup.data
+index 407d6b2..99be615 100644
+--- a/setup.data
++++ b/setup.data
+@@ -119,6 +119,7 @@ hw_menu_entry: @hw-usb
+ 	awlibusb: "Awox RF/IR Remote (userspace)"
+ 	sb0540: "Creative USB IR Receiver (SB0540)"
+ 	commandir: "CommandIR Multi-IR Transceiver (userspace)"
++	usb_irtoy: "Dangerous Prototypes USB Infrared Toy"
+ 	dfclibusb: "DFC USB InfraRed Remote Control (userspace)"
+ 	sasem: "Dign HV5 HTPC IR/VFD Module"
+ 	dvico: "DViCO USB Remote"
+@@ -147,6 +148,7 @@ hw_menu_entry: @hw-usb
+ 	mplay: "VLSystem MPlay Blast"
+ 	mplay: "VLSystem MPlay Mini"
+ 
++
+ param_type: \
+ 	act200l \
+ 	act220l \
+@@ -190,6 +192,9 @@ param_type: \
+ 	usbx
+ 	ttyUSB:
+ 
++param_type: usb_irtoy 
++	ttyACM:
++
+ param_type: \
+ 	adaptec \
+ 	alsa_usb \
+@@ -390,6 +395,10 @@ default_param: \
+ 	usbx
+ 	ttyUSB1:
+ 
++default_param: usb_irtoy 
++	ttyACM1:
++
++
+ remote: \
+ 	hauppauge \
+ 	hauppauge_dvb \
+@@ -424,6 +433,7 @@ remote: \
+ 	ttusbir \
+ 	uirt2_raw \
+ 	udp \
++	usb_irtoy \
+ 	usb_uirt_raw \
+ 	wpc8769l
+ 	any:
+diff --git a/setup.sh b/setup.sh
+index 9a3bdec..7d46c25 100755
+--- a/setup.sh
++++ b/setup.sh
+@@ -65,6 +65,10 @@ GetSelectedDriver ()
+     elif test "$DRIVER_PARAMETER" = "ttyUSB2"; then COM2="on"; IRTTY="/dev/ttyUSB1"; LIRC_PORT="none"; LIRC_IRQ="none"
+     elif test "$DRIVER_PARAMETER" = "ttyUSB3"; then COM3="on"; IRTTY="/dev/ttyUSB2"; LIRC_PORT="none"; LIRC_IRQ="none"
+     elif test "$DRIVER_PARAMETER" = "ttyUSB4"; then COM4="on"; IRTTY="/dev/ttyUSB3"; LIRC_PORT="none"; LIRC_IRQ="none"
++    elif test "$DRIVER_PARAMETER" = "ttyACM1"; then COM1="on"; IRTTY="/dev/ttyACM0"; LIRC_PORT="none"; LIRC_IRQ="none"
++    elif test "$DRIVER_PARAMETER" = "ttyACM2"; then COM2="on"; IRTTY="/dev/ttyACM1"; LIRC_PORT="none"; LIRC_IRQ="none"
++    elif test "$DRIVER_PARAMETER" = "ttyACM3"; then COM3="on"; IRTTY="/dev/ttyACM2"; LIRC_PORT="none"; LIRC_IRQ="none"
++    elif test "$DRIVER_PARAMETER" = "ttyACM4"; then COM4="on"; IRTTY="/dev/ttyACM3"; LIRC_PORT="none"; LIRC_IRQ="none"
+     elif test "$DRIVER_PARAMETER" = "com1"; then COM1="on"; LIRC_PORT=$COM1_PORT; LIRC_IRQ=$COM1_IRQ
+     elif test "$DRIVER_PARAMETER" = "com2"; then COM2="on"; LIRC_PORT=$COM2_PORT; LIRC_IRQ=$COM2_IRQ
+     elif test "$DRIVER_PARAMETER" = "com3"; then COM3="on"; LIRC_PORT=$COM3_PORT; LIRC_IRQ=$COM3_IRQ
+@@ -207,6 +211,30 @@ SetPortAndIrq ()
+ 	else
+ 	    return 1;
+         fi
++	elif test "$DRIVER_PARAM_TYPE" = "ttyACM"; then
++	{
++        dialog --clear --backtitle "$BACKTITLE" \
++               --title "Select tty to use" \
++               --radiolist "$SET_TTY_TEXT" 13 74 6 \
++                 1 "/dev/ttyACM0" $COM1 \
++                 2 "/dev/ttyACM1" $COM2 \
++                 3 "/dev/ttyACM2" $COM3 \
++                 4 "/dev/ttyACM3" $COM4 \
++               2> $TEMP
++	}
++        if test "$?" = "0"; then
++            {
++	    set `cat $TEMP`
++            if   test "$1" = "1"; then DRIVER_PARAMETER="ttyACM1"
++            elif test "$1" = "2"; then DRIVER_PARAMETER="ttyACM2"
++            elif test "$1" = "3"; then DRIVER_PARAMETER="ttyACM3"
++            elif test "$1" = "4"; then DRIVER_PARAMETER="ttyACM4"
++            fi
++            GetSelectedDriver
++            }
++	else
++	    return 1;
++        fi
+     fi
+     return 0;
+     }
+@@ -347,7 +375,7 @@ SaveConfig ()
+ 	else echo "--without-timer \\" >>$START;
+ 	fi
+         }
+-    elif test "$DRIVER_PARAM_TYPE" = "tty" -o "$DRIVER_PARAM_TYPE" = "ttyUSB" -o "$LIRC_DRIVER" = "bte"; then
++    elif test "$DRIVER_PARAM_TYPE" = "tty" -o "$DRIVER_PARAM_TYPE" = "ttyUSB" -o "$DRIVER_PARAM_TYPE" = "ttyACM" -o "$LIRC_DRIVER" = "bte"; then
+         {
+ 	echo "--with-tty=$IRTTY \\" >>$START
+ 	}
+-- 
+1.7.4.1
+

@@ -7,7 +7,10 @@ DEPENDS = "virtual/kernel"
 PR = "r5"
 
 SRC_URI = "${SOURCEFORGE_MIRROR}/lirc/lirc-${PV}.tar.gz \
-      file://lircd.init file://lircmd.init"
+      file://lircd.init file://lircmd.init \
+      file://0001-Add-driver-for-USB-Infrared-Toy-in-sample-mode.patch \
+      file://0002-Add-USB-Infrared-Toy-driver-to-setup-system.patch "
+
 S = "${WORKDIR}/lirc-${PV}"
 
 inherit autotools module-base update-rc.d
@@ -31,6 +34,9 @@ do_install_append() {
 
         install -d ${D}${datadir}/lirc/
         cp -pPR ${S}/remotes ${D}${datadir}/lirc/
+	rm ${D}/var/run/lirc/lirc*
+	rmdir ${D}/var/run/lirc
+	rmdir ${D}/var/run
 }
 
 
