@@ -2,7 +2,7 @@ DESCRIPTION = "software media player and entertainment hub"
 
 LICENSE = "GPLv2"
 LIC_FILES_CHKSUM = "file://copying.txt;md5=4cea88e622381d1ad6e43f07c47513b5"
-DEPENDS = "boost libass mysql5 mpeg2dec libmad libmodplug tiff yajl libtinyxml taglib libcdio jasper libmicrohttpd libssh samba rtmpdump libbluray libnfs samba swig-native"
+DEPENDS = "boost libass mysql5 mpeg2dec libmad libmodplug tiff yajl libtinyxml taglib libcdio jasper libmicrohttpd libssh samba rtmpdump libbluray libnfs samba swig-native virtual/libgles2"
 RRECOMMENDS_${PN} = "lirc"
 
 PR = "r2"
