@@ -14,9 +14,6 @@ EXTRA_IMAGE_FEATURES += " \
 "
 
 IMAGE_INSTALL += " \
-    packagegroup-fsl-gstreamer \
-    packagegroup-fsl-tools-testapps \
-    packagegroup-fsl-tools-benchmark \
     dropbear \
     xbmc \
     networkmanager \
@@ -30,6 +27,5 @@ IMAGE_INSTALL += " \
     tvheadend \
     util-linux \
 "
-
 
 export IMAGE_BASENAME = "xbmc-image"
