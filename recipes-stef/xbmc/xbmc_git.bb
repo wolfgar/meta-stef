@@ -82,5 +82,6 @@ FILES_${PN}-dbg += " \
                     /imx6/xbmc/lib/xbmc/addons/library.xbmc.pvr/.debug/ \
                     /imx6/xbmc/lib/xbmc/addons/visualization.waveform/.debug/ \
                     /imx6/xbmc/lib/xbmc/.debug/ \
+                    /imx6/xbmc/lib/xbmc/addons/library.xbmc.codec/.debug \
                    "
 
