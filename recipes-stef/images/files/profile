@@ -1,0 +1,6 @@
+alias ll="ls -l"
+alias temp='cat /sys/class/thermal/thermal_zone0/temp'
+alias x="/imx6/xbmc/lib/xbmc/xbmc.bin"
+alias psrt="ps -Leo pid,tid,class,rtprio,ni,pri,psr,pcpu,stat,wchan:14,comm"
+alias freq="cat /sys/devices/system/cpu/cpu0/cpufreq/cpuinfo_cur_freq"
+

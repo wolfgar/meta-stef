@@ -26,6 +26,10 @@ IMAGE_INSTALL += " \
     ntp-utils \
     tvheadend \
     util-linux \
+    firmware-imx-vpu-imx6d \
+    fsl-rc-local \
+    xbmc-image-custom-rfs \
 "
 
 export IMAGE_BASENAME = "xbmc-image"
+
