@@ -6,6 +6,8 @@ SRC_URI = "git://github.com/wolfgar/linux.git \
            file://defconfig \
 "
 DEPENDS += "lzop-native"
+LOCALVERSION = "-4.1.0-wandboard"
+
 # Wandboard branch - based on 4.1.0 from Freescale git
 SRCREV = "3fa9b19736b91c8b9e690051dd7c4fb842b8531a"
 #SRCREV = "f0bcd6f16ed3e163d2f8f77ef76623af0fc6ad43"
