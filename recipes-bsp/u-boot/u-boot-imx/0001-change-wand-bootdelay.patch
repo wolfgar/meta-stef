@@ -1,0 +1,25 @@
+From 4c3fc3655b03412d979f05fe5c814b6abf871a9f Mon Sep 17 00:00:00 2001
+From: wolfgar <stephan.rafin@laposte.net>
+Date: Thu, 31 Oct 2013 23:52:25 +0100
+Subject: [PATCH] Reduce boot delay from 5s to 1s
+
+---
+ include/configs/wandboard.h |    2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/include/configs/wandboard.h b/include/configs/wandboard.h
+index 442a984..6c11987 100644
+--- a/include/configs/wandboard.h
++++ b/include/configs/wandboard.h
+@@ -48,7 +48,7 @@
+ #define CONFIG_CMD_BMODE
+ #define CONFIG_CMD_SETEXPR
+ 
+-#define CONFIG_BOOTDELAY		5
++#define CONFIG_BOOTDELAY		1
+ 
+ #define CONFIG_SYS_MEMTEST_START	0x10000000
+ #define CONFIG_SYS_MEMTEST_END		(CONFIG_SYS_MEMTEST_START + 500 * SZ_1M)
+-- 
+1.7.9.5
+
