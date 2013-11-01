@@ -2,9 +2,8 @@ DESCRIPTION = "software media player and entertainment hub"
 
 LICENSE = "GPLv2"
 LIC_FILES_CHKSUM = "file://copying.txt;md5=4cea88e622381d1ad6e43f07c47513b5"
-DEPENDS = "boost libass mysql5 mpeg2dec libmad libmodplug tiff yajl libtinyxml taglib libcdio jasper libmicrohttpd libssh samba rtmpdump libbluray libnfs samba swig-native"
+DEPENDS = "libvorbis boost libass mysql5 mpeg2dec libmad libmodplug tiff yajl libtinyxml taglib libcdio jasper libmicrohttpd libssh samba rtmpdump libbluray libnfs samba swig-native"
 DEPENDS_append_mx6 = " virtual/kernel virtual/libgles2 virtual/egl imx-lib libfslvpuwrap"
-RRECOMMENDS_${PN} = "lirc"
 
 PR = "r2"
 
@@ -62,6 +61,7 @@ RRECOMMENDS_${PN} = " python-stringold \
                       python-compression \ 
                       python-audio \
                       python-email \
+                      python-numbers \
                       eglibc-gconv-cp1252 \
                       libcurl \
                       libnfs \
@@ -69,6 +69,11 @@ RRECOMMENDS_${PN} = " python-stringold \
                       libbluray \ 
                       upower \
                       libmad \
+                      libass \
+                      eglibc-gconv-ibm850 \
+                      eglibc-gconv-utf-32 \
+                      lirc \
+                      jasper \
                     "
 
 FILES_${PN} += "/imx6 /usr/share/icons/hicolor"
