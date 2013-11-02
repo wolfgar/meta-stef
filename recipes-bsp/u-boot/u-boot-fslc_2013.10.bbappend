@@ -12,7 +12,7 @@ do_install_append_mx6 () {
   uboot-mkimage -A arm -T script -C none -d ${WORKDIR}/env.txt ${WORKDIR}/bootscript-${MACHINE} 
 }
 
-do_deploy_mx6 () {
+do_deploy_append_mx6 () {
     install -d ${DEPLOYDIR}
     install ${WORKDIR}/bootscript-${MACHINE} \
             ${DEPLOYDIR}/bootscript-${MACHINE}
