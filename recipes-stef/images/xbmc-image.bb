@@ -16,7 +16,7 @@ EXTRA_IMAGE_FEATURES += " \
 IMAGE_INSTALL += " \
     dropbear \
     xbmc \
-    xbmc-nm-addon_12 \
+    xbmc-nm-addon \
     networkmanager \
     procps \
     util-linux-mount \
