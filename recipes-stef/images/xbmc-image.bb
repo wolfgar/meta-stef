@@ -30,6 +30,8 @@ IMAGE_INSTALL += " \
     firmware-imx-vpu-imx6d \
     fsl-rc-local \
     xbmc-image-custom-rfs \
+    packagegroup-core-sdk \
+    joe \
 "
 
 export IMAGE_BASENAME = "xbmc-image"
