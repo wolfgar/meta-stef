@@ -1,8 +1,9 @@
 FILESEXTRAPATHS_prepend := "${THISDIR}/u-boot-imx:"
 FILESEXTRAPATHS_prepend_wandboard :="${THISDIR}/u-boot-imx/wandboard:"
+FILESEXTRAPATHS_prepend_utilite := "${THISDIR}/u-boot-imx/utilite:"
 
-SRC_URI_append_wandboard += "file://0001-change-wand-bootdelay.patch \
-                             file://env.txt"
+SRC_URI_append_wandboard += "file://0001-change-wand-bootdelay.patch " 
+SRC_URI += "file://env.txt "
 
 DEPENDS = "u-boot-mkimage-native"
 
