@@ -1,1 +1,1 @@
-DEPENDS += "imx-vpu"
+DEPENDS = "imx-vpu"
