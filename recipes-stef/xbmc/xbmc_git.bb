@@ -3,7 +3,7 @@ DESCRIPTION = "software media player and entertainment hub"
 LICENSE = "GPLv2"
 LIC_FILES_CHKSUM = "file://copying.txt;md5=4cea88e622381d1ad6e43f07c47513b5"
 DEPENDS = "libvorbis boost libass mysql5 mpeg2dec libmad libmodplug tiff yajl libtinyxml taglib libcdio jasper libmicrohttpd libssh samba rtmpdump libbluray libnfs samba swig-native"
-DEPENDS_append_mx6 = " virtual/kernel virtual/libgles2 virtual/egl imx-lib libfslvpuwrap libcec"
+DEPENDS_append_mx6 = " virtual/kernel virtual/libgles2 virtual/egl libfslvpuwrap libcec"
 
 PR = "r2"
 
