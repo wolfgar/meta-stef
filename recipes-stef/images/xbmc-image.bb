@@ -16,6 +16,7 @@ EXTRA_IMAGE_FEATURES += " \
 IMAGE_INSTALL += " \
     dropbear \
     xbmc \
+    xbmc-nm-addon \
     networkmanager \
     procps \
     util-linux-mount \
@@ -29,6 +30,8 @@ IMAGE_INSTALL += " \
     firmware-imx-vpu-imx6d \
     fsl-rc-local \
     xbmc-image-custom-rfs \
+    packagegroup-core-sdk \
+    joe \
 "
 
 export IMAGE_BASENAME = "xbmc-image"

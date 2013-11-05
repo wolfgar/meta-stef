@@ -3,12 +3,12 @@ DESCRIPTION = "software media player and entertainment hub"
 LICENSE = "GPLv2"
 LIC_FILES_CHKSUM = "file://copying.txt;md5=4cea88e622381d1ad6e43f07c47513b5"
 DEPENDS = "libvorbis boost libass mysql5 mpeg2dec libmad libmodplug tiff yajl libtinyxml taglib libcdio jasper libmicrohttpd libssh samba rtmpdump libbluray libnfs samba swig-native"
-DEPENDS_append_mx6 = " virtual/kernel virtual/libgles2 virtual/egl imx-lib libfslvpuwrap"
+DEPENDS_append_mx6 = " virtual/kernel virtual/libgles2 virtual/egl libfslvpuwrap libcec"
 
 PR = "r2"
 
-SRC_URI = "git://github.com/wolfgar/xbmc.git;protocol=https;tag=613e68f57bca9188be147465bcd7ff62e87e708b"
-
+SRC_URI = "git://github.com/wolfgar/xbmc.git"
+SRCREV="00397ceb6c7a0e981e79daa1a61c4c14b1b3c6cb"
 S = "${WORKDIR}/git"
 
 
@@ -17,6 +17,7 @@ inherit autotools lib_package pkgconfig gettext python-dir
 EXTRA_OECONF="ac_cv_path_JAVA_EXE=/usr/bin/java \
 --prefix=/imx6/xbmc --disable-x11 --disable-sdl --disable-xrandr --disable-gl --disable-vdpau --disable-vaapi --disable-openmax --enable-neon --enable-gles --enable-udev --enable-codec=imxvpu --disable-debug --disable-texturepacker"
 
+CXXFLAGS += " -I${STAGING_KERNEL_DIR}/include "
 
 do_configure() {
   export PYTHON_EXTRA_LDFLAGS=""
@@ -74,6 +75,7 @@ RRECOMMENDS_${PN} = " python-stringold \
                       eglibc-gconv-utf-32 \
                       lirc \
                       jasper \
+                      libcec \
                     "
 
 FILES_${PN} += "/imx6 /usr/share/icons/hicolor"
