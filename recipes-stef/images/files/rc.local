@@ -12,7 +12,7 @@
 # By default this script does nothing.
 
 
-
+/usr/sbin/NetworkManager
 echo 0 >  /sys/class/graphics/fbcon/cursor_blink
 mkdir /tmp/temp
 export HOME=/home/root
