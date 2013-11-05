@@ -13,6 +13,7 @@ DRIVER_nslu2 = "nslu2"
 #DEPENDS_wandboard-quad = "libirman"
 DRIVER_wandboard-quad = "usb_irtoy"
 DRIVER_utilite = "usb_irtoy"
+DRIVER_wandboard-dual = "usb_irtoy"
 
 # XXX Why is X disabled on all these platforms anyway?
 EXTRA_OECONF_append_collie = " --without-x"
