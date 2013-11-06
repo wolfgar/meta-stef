@@ -9,7 +9,6 @@ SRC_URI = " \
  file://interfaces \
  file://NetworkManager.conf \
  file://profile \
- file://rc.local \
  file://config \
  file://advancedsettings.xml \
  file://guisettings.xml \
