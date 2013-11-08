@@ -76,6 +76,7 @@ RRECOMMENDS_${PN} = " python-stringold \
                       lirc \
                       jasper \
                       libcec \
+                      tzdata \
                     "
 
 FILES_${PN} += "/imx6 /usr/share/icons/hicolor"
