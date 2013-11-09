@@ -32,6 +32,8 @@ IMAGE_INSTALL += " \
     xbmc-image-custom-rfs \
     packagegroup-core-sdk \
     joe \
+    rsync \
+    ethtool \
 "
 
 export IMAGE_BASENAME = "xbmc-image"
