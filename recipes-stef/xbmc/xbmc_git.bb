@@ -71,6 +71,8 @@ RRECOMMENDS_${PN} = " python-stringold \
                       upower \
                       libmad \
                       libass \
+                      mpeg2dec \
+                      libcec \
                       eglibc-gconv-ibm850 \
                       eglibc-gconv-utf-32 \
                       lirc \
