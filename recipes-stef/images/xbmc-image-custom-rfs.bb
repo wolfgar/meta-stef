@@ -21,7 +21,6 @@ install -d ${D}/etc/NetworkManager/
 install -d ${D}/home/root/
 install -m 0644 ${WORKDIR}/interfaces ${D}/etc/network/
 install -m 0644 ${WORKDIR}/NetworkManager.conf ${D}/etc/NetworkManager/
-install -m 0755 ${WORKDIR}/rc.local ${D}/etc/
 install -m 0644 ${WORKDIR}/profile ${D}/home/root/.profile
 install -d ${D}/var/lib/smart/
 install -m 0644 ${WORKDIR}/config ${D}/var/lib/smart/
