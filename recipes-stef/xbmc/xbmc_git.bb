@@ -83,6 +83,7 @@ RRECOMMENDS_${PN} = " python-stringold \
                       alsa-lib \
                       alsa-dev \
                       tzdata \
+                      xbmc-pvr-addons \
                     "
 
 FILES_${PN} += "/imx6 /usr/share/icons/hicolor"
