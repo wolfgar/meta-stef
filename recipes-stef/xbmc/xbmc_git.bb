@@ -2,13 +2,13 @@ DESCRIPTION = "software media player and entertainment hub"
 
 LICENSE = "GPLv2"
 LIC_FILES_CHKSUM = "file://copying.txt;md5=4cea88e622381d1ad6e43f07c47513b5"
-DEPENDS = "libvorbis boost libass mysql5 mpeg2dec libmad libmodplug tiff yajl libtinyxml taglib libcdio jasper libmicrohttpd libssh samba rtmpdump libbluray libnfs samba swig-native"
+DEPENDS = "alsa-lib udev libvorbis boost libass mysql5 mpeg2dec libmad libmodplug tiff yajl libtinyxml taglib libcdio jasper libmicrohttpd libssh samba rtmpdump libbluray libnfs samba swig-native"
 DEPENDS_append_mx6 = " virtual/kernel virtual/libgles2 virtual/egl libfslvpuwrap libcec"
 
-PR = "r2"
+PR = "r3"
 
 SRC_URI = "git://github.com/wolfgar/xbmc.git"
-SRCREV="00397ceb6c7a0e981e79daa1a61c4c14b1b3c6cb"
+SRCREV="48c766241c07ebadfa07d5bb9d2b430119db167b"
 S = "${WORKDIR}/git"
 
 
@@ -73,11 +73,15 @@ RRECOMMENDS_${PN} = " python-stringold \
                       libass \
                       mpeg2dec \
                       libcec \
+                      kernel \
                       eglibc-gconv-ibm850 \
                       eglibc-gconv-utf-32 \
                       lirc \
                       jasper \
                       libcec \
+                      udev \
+                      alsa-lib \
+                      alsa-dev \
                       tzdata \
                     "
 
