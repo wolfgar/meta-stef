@@ -16,7 +16,7 @@ do_configure() {
   sh bootstrap
   # oe_runconf
   # Call manually configure instead of oe_runconf because of specific prefix /imx6/xbmc...
-  ${S}/configure  --build=${BUILD_SYS} \
+  ${CACHED_CONFIGUREVARS} ${S}/configure  --build=${BUILD_SYS} \
                   --host=${HOST_SYS} \
                   --target=${TARGET_SYS} \
                   ${@append_libtool_sysroot(d)} \
