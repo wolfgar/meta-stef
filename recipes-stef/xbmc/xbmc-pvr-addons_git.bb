@@ -6,7 +6,7 @@ inherit autotools
 
 SRC_URI = "git://github.com/opdenkamp/xbmc-pvr-addons.git"
 SRCREV = "accba457b54f0a2f85b56d3b1bab1790b6fcd656"
-CACHED_CONFIGUREVARS = "ac_cv_lib_GL_main+=no"
+CACHED_CONFIGUREVARS = "ac_cv_lib_GL_main=no"
 S = "${WORKDIR}/git"
 
 EXTRA_OECONF="--prefix=/imx6/xbmc"
