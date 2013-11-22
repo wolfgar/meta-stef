@@ -64,6 +64,7 @@ RRECOMMENDS_${PN} = " python-stringold \
                       python-email \
                       python-numbers \
                       python-json \
+                      python-subprocess \
                       eglibc-gconv-cp1252 \
                       libcurl \
                       libnfs \
