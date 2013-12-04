@@ -1,6 +1,7 @@
 FILESEXTRAPATHS_prepend := "${THISDIR}/u-boot-imx:"
 FILESEXTRAPATHS_prepend_wandboard :="${THISDIR}/u-boot-imx/wandboard:"
 FILESEXTRAPATHS_prepend_utilite := "${THISDIR}/u-boot-imx/utilite:"
+FILESEXTRAPATHS_prepend_udoo := "${THISDIR}/u-boot-imx/udoo:"
 
 SRC_URI_append_wandboard += "file://0001-change-wand-bootdelay.patch " 
 SRC_URI += "file://env.txt "
