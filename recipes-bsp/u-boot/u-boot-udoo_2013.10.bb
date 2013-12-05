@@ -11,7 +11,8 @@ LICENSE = "GPLv2+"
 LIC_FILES_CHKSUM = "file://Licenses/README;md5=6bc50ecab884fce80cd3ef3da8852b08"
 
 # revision of 3.10.9-1.0.0 alpha branch
-SRC_URI = "git://github.com/UDOOboard/U-Boot_Unico-2013.git"
+SRC_URI = "git://github.com/UDOOboard/U-Boot_Unico-2013.git \
+           file://udoo-env.patch"
 SRCREV = "b48999bc21243676a80f94ff1d2cd78418aca013"
 S = "${WORKDIR}/git"
 

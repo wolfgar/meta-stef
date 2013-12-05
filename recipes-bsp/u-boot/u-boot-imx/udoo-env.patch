@@ -1,0 +1,20 @@
+--- U-Boot_Unico-2013/include/configs/udoo.h	2013-12-04 01:16:08.874681350 +0100
++++ b/include/configs/udoo.h	2013-12-05 00:29:49.376490895 +0100
+@@ -100,7 +100,7 @@
+ #define CONFIG_CMD_BMODE
+ #define CONFIG_CMD_SETEXPR
+ 
+-#define CONFIG_BOOTDELAY		5
++#define CONFIG_BOOTDELAY		1
+ 
+ #define CONFIG_SYS_MEMTEST_START	0x10000000
+ #define CONFIG_SYS_MEMTEST_END		(CONFIG_SYS_MEMTEST_START + 500 * SZ_1M)
+@@ -156,7 +156,7 @@
+ 	 "${hdmi_patch} " \
+ 	 "fbmem=24M video=mxcfb0:dev=hdmi,1920x1080M@60,bpp=32\0" \
+ 	"loadbootscript=" \
+-	 "ext2load mmc ${mmcdev}:${mmcpart} ${loadaddr} ${script};\0" \
++	 "fatload mmc ${mmcdev}:${mmcpart} ${loadaddr} ${script};\0" \
+ 	"bootscript=echo Running bootscript from mmc ...; " \
+ 	 "source\0" \
+ 	"loaduimage=ext2load mmc ${mmcdev}:${mmcpart} ${loadaddr} ${uimage}\0" \
