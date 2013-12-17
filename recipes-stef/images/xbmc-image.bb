@@ -35,7 +35,7 @@ IMAGE_INSTALL += " \
     rsync \
     ethtool \
     samba \
-    transmission
+    transmission \
 "
 
 export IMAGE_BASENAME = "xbmc-image"
