@@ -10,6 +10,5 @@ SCMVERSION ?= "y"
 # SRC_URI for wandboard kernel
 SRC_URI = "git://github.com/wolfgar/utilite.git \
            file://defconfig \
-           file://10_remove-printk.patch \
 "
 
