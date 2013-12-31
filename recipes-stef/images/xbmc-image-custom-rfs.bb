@@ -14,6 +14,8 @@ SRC_URI = " \
  file://guisettings.xml \
 "
 
+SRC_URI_append_utilite = "file://boot_utilite_ssd.scr "
+
 do_install () {
 install -d ${D}/etc/
 install -d ${D}/etc/network/
@@ -30,5 +32,10 @@ install -m 0644 ${WORKDIR}/guisettings.xml ${D}/home/root/.xbmc/userdata/
 ln -s /tmp/temp ${D}/home/root/.xbmc/temp
 }
 
-FILES_${PN} += "/home/root"
+do_install_append_utilite () {
+install -d ${D}/boot/
+install -m 0644 ${WORKDIR}/boot_utilite_ssd.scr ${D}/boot/boot.scr
+}
 
+
+FILES_${PN} += "/home/root /boot/"

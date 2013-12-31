@@ -12,3 +12,7 @@ SRC_URI = "git://github.com/wolfgar/utilite.git \
            file://defconfig \
 "
 
+do_install_append () {
+  rm -f ${D}/boot/uImage
+  cp ${D}/boot/uImage-*  ${D}/boot/uImage
+}
