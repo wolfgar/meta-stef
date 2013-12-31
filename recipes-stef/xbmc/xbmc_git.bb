@@ -2,7 +2,7 @@ DESCRIPTION = "software media player and entertainment hub"
 
 LICENSE = "GPLv2"
 LIC_FILES_CHKSUM = "file://copying.txt;md5=4cea88e622381d1ad6e43f07c47513b5"
-DEPENDS = "libsamplerate0 alsa-lib udev libvorbis boost libass mysql5 mpeg2dec libmad libmodplug tiff yajl libtinyxml taglib libcdio jasper libmicrohttpd libssh samba rtmpdump libbluray libnfs samba swig-native"
+DEPENDS = "libsamplerate0 alsa-lib udev libvorbis boost libass mysql5 mpeg2dec libmad libmodplug tiff yajl libtinyxml taglib libcdio jasper libmicrohttpd libssh samba rtmpdump libbluray libnfs samba swig-native libxslt libplist shairplay"
 DEPENDS_append_mx6 = " virtual/kernel virtual/libgles2 virtual/egl libfslvpuwrap libcec"
 
 PR = "r3"
@@ -15,7 +15,7 @@ S = "${WORKDIR}/git"
 inherit autotools lib_package pkgconfig gettext python-dir
 
 EXTRA_OECONF="ac_cv_path_JAVA_EXE=/usr/bin/java \
---prefix=/imx6/xbmc --disable-x11 --disable-sdl --disable-xrandr --disable-gl --disable-vdpau --disable-vaapi --disable-openmax --enable-neon --enable-gles --enable-udev --enable-codec=imxvpu --disable-debug --disable-texturepacker"
+--prefix=/imx6/xbmc --disable-x11 --disable-sdl --disable-xrandr --disable-gl --disable-vdpau --disable-vaapi --disable-openmax --enable-neon --enable-gles --enable-udev --enable-codec=imxvpu --disable-debug --disable-texturepacker --enable-airplay --enable-airtunes"
 
 CXXFLAGS += " -I${STAGING_KERNEL_DIR}/include "
 
@@ -86,6 +86,7 @@ RRECOMMENDS_${PN} = " python-stringold \
                       alsa-dev \
                       tzdata \
                       xbmc-pvr-addons \
+		      shairplay \
                     "
 
 FILES_${PN} += "/imx6 /usr/share/icons/hicolor"
