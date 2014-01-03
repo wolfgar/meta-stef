@@ -1,6 +1,7 @@
 DESCRIPTION = "Transmission is a cross-platform BitTorrent client that is: easy, lean, native and powerful"
 LICENSE = "GPLv2 & MIT"
 LIC_FILES_CHKSUM = "file://COPYING;md5=7ee657ac1dce0e7353033fc06c8087d2"
+DEPENDS = "curl"
 
 inherit autotools 
 
