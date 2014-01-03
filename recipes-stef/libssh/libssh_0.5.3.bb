@@ -4,6 +4,7 @@ and server implementations."
 
 LICENSE = "LGPLv2.1"
 LIC_FILES_CHKSUM = "file://COPYING;md5=388a4fb1dea8ceae0be78ba9b01fc139"
+DEPENDS = "zlib openssl"
 
 PR = "r0"
 
