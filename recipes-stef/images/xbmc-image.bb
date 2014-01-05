@@ -36,6 +36,9 @@ IMAGE_INSTALL += " \
     ethtool \
     samba \
     transmission \
+    mpd \
+    mpc \
+    oscam \
 "
 
 export IMAGE_BASENAME = "xbmc-image"
