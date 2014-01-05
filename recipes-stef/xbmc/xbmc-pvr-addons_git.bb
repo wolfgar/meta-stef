@@ -23,7 +23,5 @@ do_configure() {
                   ${EXTRA_OECONF}
 }
 
-
-
-FILES_${PN} += "/imx6/xbmc/share/xbmc/addons"
-FILES_${PN}-dbg += "/imx6/xbmc/lib/xbmc/addons"
+FILES_${PN} += "/imx6/xbmc"
+FILES_${PN}-dbg += "/imx6/xbmc/lib/xbmc/addons/*/.debug/"
