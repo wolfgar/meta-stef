@@ -5,10 +5,10 @@ LIC_FILES_CHKSUM = "file://copying.txt;md5=4cea88e622381d1ad6e43f07c47513b5"
 DEPENDS = "libsamplerate0 alsa-lib udev libvorbis boost libass mysql5 mpeg2dec libmad libmodplug tiff yajl libtinyxml taglib libcdio jasper libmicrohttpd libssh samba rtmpdump libbluray libnfs samba swig-native libxslt libplist shairplay flac"
 DEPENDS_append_mx6 = " virtual/kernel virtual/libgles2 virtual/egl libfslvpuwrap libcec"
 
-PR = "r3"
+PR = "r4"
 
 SRC_URI = "git://github.com/wolfgar/xbmc.git"
-SRCREV="11bfb5ef17041890dca4c0bed94bf7a20d1bc4b8"
+SRCREV="4ee729158fa34de3d5c611afbd61b62923cc1ab1"
 S = "${WORKDIR}/git"
 
 
