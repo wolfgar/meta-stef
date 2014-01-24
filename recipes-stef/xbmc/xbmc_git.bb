@@ -8,7 +8,7 @@ DEPENDS_append_mx6 = " virtual/kernel virtual/libgles2 virtual/egl libfslvpuwrap
 PR = "r4"
 
 SRC_URI = "git://github.com/wolfgar/xbmc.git"
-SRCREV="4ee729158fa34de3d5c611afbd61b62923cc1ab1"
+SRCREV="318954fd920d2e1993beb2a4d3a4ad8a22147d9b"
 S = "${WORKDIR}/git"
 
 
