@@ -248,8 +248,9 @@
         <usemusicvisinstead>true</usemusicvisinstead>
     </screensaver>
     <services>
-        <airplay>false</airplay>
+        <airplay>true</airplay>
         <airplaypassword></airplaypassword>
+        <airplayvolumecontrol>true</airplayvolumecontrol>
         <devicename>XBMC</devicename>
         <esallinterfaces>false</esallinterfaces>
         <escontinuousdelay>25</escontinuousdelay>
@@ -263,9 +264,9 @@
         <upnprenderer>false</upnprenderer>
         <upnpserver>false</upnpserver>
         <useairplaypassword>false</useairplaypassword>
-        <webserver>false</webserver>
+        <webserver>true</webserver>
         <webserverpassword></webserverpassword>
-        <webserverport>80</webserverport>
+        <webserverport>8080</webserverport>
         <webserverusername>xbmc</webserverusername>
         <webskin>webinterface.default</webskin>
         <zeroconf>true</zeroconf>

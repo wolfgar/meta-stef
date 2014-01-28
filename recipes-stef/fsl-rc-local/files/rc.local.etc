@@ -18,6 +18,6 @@ mkdir /tmp/temp
 export HOME=/home/root
 #sleep 2
 #/usr/bin/usynergy &  
-fbset -depth 16
+/usr/bin/tvheadend -l /dev/null &
 /imx6/xbmc/lib/xbmc/xbmc.bin 2> /dev/null &
 

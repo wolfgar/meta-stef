@@ -32,6 +32,7 @@ IMAGE_INSTALL += " \
     xbmc-image-custom-rfs \
     packagegroup-core-sdk \
     joe \
+    nano \
     rsync \
     ethtool \
     samba \
