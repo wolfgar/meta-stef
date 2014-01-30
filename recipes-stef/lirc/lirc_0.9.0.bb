@@ -9,7 +9,8 @@ PR = "r5"
 SRC_URI = "${SOURCEFORGE_MIRROR}/lirc/lirc-${PV}.tar.gz \
       file://lircd.init file://lircmd.init \
       file://0001-Add-driver-for-USB-Infrared-Toy-in-sample-mode.patch \
-      file://0002-Add-USB-Infrared-Toy-driver-to-setup-system.patch "
+      file://0002-Add-USB-Infrared-Toy-driver-to-setup-system.patch \
+      file://lirc_no_kernel.patch"
 
 S = "${WORKDIR}/lirc-${PV}"
 
