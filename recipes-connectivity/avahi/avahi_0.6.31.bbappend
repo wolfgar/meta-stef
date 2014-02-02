@@ -1,6 +1,6 @@
 FILESEXTRAPATHS_prepend := "${THISDIR}/files:"
 
-SRC_URI = " file://avahi-daemon.conf "
+SRC_URI += " file://avahi-daemon.conf "
 
 do_install_append () {
 install -d ${D}/etc/avahi/
