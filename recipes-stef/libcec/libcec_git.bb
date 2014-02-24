@@ -2,11 +2,11 @@ DESCRIPTION = "libCEC allows you in combination with the right hardware to contr
 LICENSE = "GPLv2+"
 LIC_FILES_CHKSUM = "file://COPYING;md5=5e8e16396992369f73f3d28875f846da"
 
-PR = "r0"
+PR = "r1"
 inherit autotools pkgconfig
 
 SRC_URI = "git://github.com/wolfgar/libcec.git "
-SRCREV = "90b994705ee2492afa00f914e0a070a0f0929f21"
+SRCREV = "ea25675fbed879f988c1a23d4d14103d2d39ec2a"
 
 EXTRA_OECONF="--enable-imx6"
 
