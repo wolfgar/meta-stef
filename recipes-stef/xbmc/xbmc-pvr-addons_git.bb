@@ -5,7 +5,7 @@ LIC_FILES_CHKSUM = "file://COPYING;md5=d32239bcb673463ab874e80d47fae504"
 inherit autotools 
 
 SRC_URI = "git://github.com/opdenkamp/xbmc-pvr-addons.git"
-SRCREV = "9021115ddb5c28a5afe351fff3e848a106a6df47"
+SRCREV = "026317703df84e80c3d1062656baeb840cf21d54"
 CACHED_CONFIGUREVARS = "ac_cv_lib_GL_main=no"
 S = "${WORKDIR}/git"
 
