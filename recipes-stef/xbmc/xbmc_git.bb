@@ -5,12 +5,11 @@ LIC_FILES_CHKSUM = "file://copying.txt;md5=4cea88e622381d1ad6e43f07c47513b5"
 DEPENDS = "libsamplerate0 alsa-lib udev libvorbis boost libass mysql5 mpeg2dec libmad libmodplug tiff yajl libtinyxml taglib libcdio jasper libmicrohttpd libssh samba rtmpdump libbluray libnfs samba swig-native libxslt libplist shairplay flac"
 DEPENDS_append_mx6 = " virtual/kernel virtual/libgles2 virtual/egl libfslvpuwrap libcec"
 
-PR = "r4"
+PR = "r5"
 
-SRC_URI = "git://github.com/wolfgar/xbmc.git"
-SRCREV="e26d58c7bfa888b3420660d5be0956be448f16b5"
+SRC_URI = "git://github.com/xbmc-imx6/xbmc.git"
+SRCREV="6aa1082d6906f7bedae186826859cb93095e73ff"
 S = "${WORKDIR}/git"
-
 
 inherit autotools lib_package pkgconfig gettext python-dir
 
