@@ -8,7 +8,7 @@ DEPENDS_append_mx6 = " virtual/kernel virtual/libgles2 virtual/egl libfslvpuwrap
 PR = "r5"
 
 SRC_URI = "git://github.com/xbmc-imx6/xbmc.git"
-SRCREV="6aa1082d6906f7bedae186826859cb93095e73ff"
+SRCREV="d73d40892b4e07732f91a89d26720cf92897b8cf"
 S = "${WORKDIR}/git"
 
 inherit autotools lib_package pkgconfig gettext python-dir
@@ -17,6 +17,7 @@ EXTRA_OECONF="ac_cv_path_JAVA_EXE=/usr/bin/java \
 --prefix=/imx6/xbmc --disable-x11 --disable-sdl --disable-xrandr --disable-gl --disable-vdpau --disable-vaapi --disable-openmax --enable-neon --enable-gles --enable-udev --enable-codec=imxvpu --disable-debug --disable-texturepacker --enable-airplay --enable-airtunes"
 
 CXXFLAGS += " -I${STAGING_KERNEL_DIR}/include "
+CFLAGS += " -I${STAGING_KERNEL_DIR}/include "
 
 do_configure() {
   export PYTHON_EXTRA_LDFLAGS=""
@@ -64,6 +65,7 @@ RRECOMMENDS_${PN} = " python-stringold \
                       python-numbers \
                       python-json \
                       python-subprocess \
+                      python-xmlrpc \
                       eglibc-gconv-cp1252 \
                       libcurl \
                       libnfs \
