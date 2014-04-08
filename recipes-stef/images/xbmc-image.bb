@@ -40,6 +40,12 @@ IMAGE_INSTALL += " \
     mpd \
     mpc \
     oscam \
+    lxc \
+    xz \
+    gnupg \
+    screen \
+    iw \
+    iproute2 \
 "
 
 export IMAGE_BASENAME = "xbmc-image"
