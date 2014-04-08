@@ -1,1 +1,1 @@
-u-boot-fslc_2013.10.bbappend
+u-boot-fslc_2014.01.bbappend

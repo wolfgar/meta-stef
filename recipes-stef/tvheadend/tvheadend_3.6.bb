@@ -6,7 +6,7 @@ DEPENDS = "libdvbcsa"
 inherit autotools 
 #lib_package pkgconfig
 
-SRC_URI = "git://github.com/tvheadend/tvheadend.git "
+SRC_URI = "git://github.com/tvheadend/tvheadend.git;branch=release/3.6"
 SRCREV = "819627ecc7db69537134ff01e946992a9ff631ca"
 
 S = "${WORKDIR}/git"

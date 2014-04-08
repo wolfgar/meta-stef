@@ -1,11 +1,12 @@
 FILESEXTRAPATHS_prepend := "${THISDIR}/files:"
 
-PR = "${INC_PR}.0"
 # SRC_URI for wandboard kernel
-SRC_URI = "git://github.com/wolfgar/linux.git \
+SRC_URI = "git://github.com/wolfgar/linux.git;branch=${SRCBRANCH} \
            file://defconfig \
 "
 DEPENDS += "lzop-native"
+
+SRCBRANCH = "wandboard_imx_3.0.35_4.1.0"
 LOCALVERSION = "-4.1.0-wandboard"
 
 # Wandboard branch - based on 4.1.0 from Freescale git
