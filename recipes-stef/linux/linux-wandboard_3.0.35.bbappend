@@ -9,5 +9,5 @@ DEPENDS += "lzop-native"
 LOCALVERSION = "-4.1.0-wandboard"
 
 # Wandboard branch - based on 4.1.0 from Freescale git
-SRCREV = "b8d0163119ad7502e1255a7e1c62495fd6373234"
+SRCREV = "c0bc6d705fa3b88f8a0587ef47a079cc5d1ef271"
 
