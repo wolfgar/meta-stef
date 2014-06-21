@@ -46,6 +46,7 @@ IMAGE_INSTALL += " \
     screen \
     iw \
     iproute2 \
+    alsa-conf \
 "
 
 export IMAGE_BASENAME = "xbmc-image"
