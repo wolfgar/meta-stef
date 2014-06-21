@@ -1,6 +1,6 @@
 FILESEXTRAPATHS_prepend := "${THISDIR}/files:"
 
-PR = "${INC_PR}.0"
+PR = "${INC_PR}.1"
 # SRC_URI for wandboard kernel
 SRC_URI = "git://github.com/wolfgar/linux.git \
            file://defconfig \
