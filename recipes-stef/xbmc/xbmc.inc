@@ -17,6 +17,7 @@ inherit autotools lib_package pkgconfig gettext python-dir
 EXTRA_OECONF="ac_cv_path_JAVA_EXE=/usr/bin/java \
 --prefix=/imx6/xbmc --disable-x11 --disable-sdl --disable-xrandr --disable-gl --disable-vdpau --disable-vaapi --disable-openmax --enable-neon --enable-gles --enable-udev --enable-codec=imxvpu --disable-debug --disable-texturepacker --enable-airplay --enable-airtunes"
 
+CPPFLAGS += " -I${STAGING_KERNEL_DIR}/include "
 CXXFLAGS += " -I${STAGING_KERNEL_DIR}/include "
 CFLAGS += " -I${STAGING_KERNEL_DIR}/include "
 
