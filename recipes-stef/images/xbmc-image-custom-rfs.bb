@@ -7,7 +7,6 @@ DEPENDS = "xbmc"
 PR = "r0"
 
 SRC_URI = " \
- file://interfaces \
  file://NetworkManager.conf \
  file://profile \
  file://config \
@@ -23,7 +22,6 @@ install -d ${D}/etc/
 install -d ${D}/etc/network/
 install -d ${D}/etc/NetworkManager/
 install -d ${D}/home/root/
-install -m 0644 ${WORKDIR}/interfaces ${D}/etc/network/
 install -m 0644 ${WORKDIR}/NetworkManager.conf ${D}/etc/NetworkManager/
 install -m 0644 ${WORKDIR}/profile ${D}/home/root/.profile
 install -d ${D}/var/lib/smart/
