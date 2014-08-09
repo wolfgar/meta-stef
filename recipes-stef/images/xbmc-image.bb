@@ -25,7 +25,6 @@ IMAGE_INSTALL += " \
     ntfs-3g \
     ntp \
     ntp-utils \
-    tvheadend \
     util-linux \
     firmware-imx-vpu-imx6d \
     fsl-rc-local \
@@ -37,7 +36,6 @@ IMAGE_INSTALL += " \
     ethtool \
     samba \
     transmission \
-    mpd \
     mpc \
     oscam \
 "
