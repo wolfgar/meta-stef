@@ -1,0 +1,25 @@
+commit d3d421b86826be3ccf34b9015118ac01d1a74d1f
+Author: wolfgar <stephan.rafin@laposte.net>
+Date:   Tue Apr 1 22:33:47 2014 +0200
+
+    Quick and dirty workaround for #52 (issue with VP8/webm)i
+    by the time we properly deal with the issue...
+
+diff --git a/xbmc/cores/dvdplayer/DVDCodecs/Video/DVDVideoCodecIMX.cpp b/xbmc/cores/dvdplayer/DVDCodecs/Video/DVDVideoCodecIMX.cpp
+index 9c23de2..283d38e 100644
+--- a/xbmc/cores/dvdplayer/DVDCodecs/Video/DVDVideoCodecIMX.cpp
++++ b/xbmc/cores/dvdplayer/DVDCodecs/Video/DVDVideoCodecIMX.cpp
+@@ -756,6 +756,13 @@ int CDVDVideoCodecIMX::Decode(BYTE *pData, int iSize, double dts, double pts)
+         m_frameInfo.pExtInfo->nFrmWidth  = (((m_frameInfo.pExtInfo->nFrmWidth) + 15) & ~15);
+         m_frameInfo.pExtInfo->nFrmHeight = (((m_frameInfo.pExtInfo->nFrmHeight) + 15) & ~15);
+ 
++        /* FIXME quick & dirty awful fix for issue #52 */
++        if (m_decOpenParam.CodecFormat == VPU_V_VP8)
++        {
++          idx = VpuFindBuffer(m_frameInfo.pDisplayFrameBuf->pbufY);
++          m_outputBuffers[idx]->SetPts(pts);
++        }
++
+         retStatus |= VC_PICTURE;
+       } //VPU_DEC_OUTPUT_DIS
+ 
