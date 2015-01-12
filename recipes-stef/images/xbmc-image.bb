@@ -9,8 +9,6 @@ SOC_EXTRA_IMAGE_FEATURES=""
 EXTRA_IMAGE_FEATURES += " \
     ${SOC_EXTRA_IMAGE_FEATURES} \
     nfs-server \
-    tools-debug \
-    tools-profile \
 "
 
 IMAGE_INSTALL += " \
@@ -29,7 +27,6 @@ IMAGE_INSTALL += " \
     firmware-imx-vpu-imx6d \
     fsl-rc-local \
     xbmc-image-custom-rfs \
-    packagegroup-core-sdk \
     joe \
     nano \
     rsync \
@@ -38,6 +35,7 @@ IMAGE_INSTALL += " \
     transmission \
     mpc \
     oscam \
+    alsa-conf \
 "
 
 export IMAGE_BASENAME = "xbmc-image"

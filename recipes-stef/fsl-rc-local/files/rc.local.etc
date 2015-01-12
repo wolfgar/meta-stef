@@ -19,5 +19,5 @@ export HOME=/home/root
 #sleep 2
 #/usr/bin/usynergy &  
 /usr/bin/tvheadend -l /dev/null &
-/imx6/xbmc/lib/xbmc/xbmc.bin 2> /dev/null &
 
+/usr/bin/launch_xbmc.sh &

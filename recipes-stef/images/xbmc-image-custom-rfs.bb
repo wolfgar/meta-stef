@@ -14,6 +14,7 @@ SRC_URI = " \
  file://advancedsettings.xml \
  file://guisettings.xml \
  file://get_dvb_firmware \
+ file://launch_xbmc.sh \
 "
 
 SRC_URI_append_utilite = "file://boot_utilite_ssd.scr "
@@ -30,11 +31,12 @@ install -d ${D}/var/lib/smart/
 install -m 0644 ${WORKDIR}/config ${D}/var/lib/smart/
 install -d ${D}/home/root/.xbmc/userdata/
 install -m 0644 ${WORKDIR}/advancedsettings.xml ${D}/home/root/.xbmc/userdata/
-install -m 0644 ${WORKDIR}/guisettings.xml ${D}/home/root/.xbmc/userdata/
+ 
 ln -s /tmp/temp ${D}/home/root/.xbmc/temp
 install -d ${D}/usr/
 install -d ${D}/usr/bin/
 install -m 0755 ${WORKDIR}/get_dvb_firmware ${D}/usr/bin/
+install -m 0755 ${WORKDIR}/launch_xbmc.sh ${D}/usr/bin/
 }
 
 do_install_append_utilite () {
