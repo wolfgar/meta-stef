@@ -1,4 +1,4 @@
-MACHINE = 'wandboard-quad'
+MACHINE ??= 'wandboard-quad'
 DISTRO ?= 'poky'
 DISTRO_FEATURES_DEFAULT="alsa argp bluetooth ext2 irda largefile pcmcia usbgadget usbhost wifi xattr nfs zeroconf pci"
 DISTRO_FEATURES = "${DISTRO_FEATURES_DEFAULT} ${DISTRO_FEATURES_LIBC} \
